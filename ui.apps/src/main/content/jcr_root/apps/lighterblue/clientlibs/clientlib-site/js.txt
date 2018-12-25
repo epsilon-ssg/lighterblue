@@ -1,0 +1,4 @@
+#base=js
+jquery-latest.min.js
+bootstrap.min.js
+jquery.validate.min.js

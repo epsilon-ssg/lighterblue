@@ -1,0 +1,58 @@
+<!--/*
+    Copyright 2015 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<sly data-sly-use.redirect="com.takeda.dexilant.models.RedirectModel"/>
+<sly data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page" ></sly>
+<title>${properties.pageTitle || properties.jcr:title}</title>
+<sly data-sly-use.metaDataModel="com.takeda.core.models.MetaDataModel"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+          data-sly-use.headlibRenderer="headlibs.html"
+          data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-call="${headlibRenderer.headlibs @
+                                designPath         = page.designPath,
+                                staticDesignPath   = page.staticDesignPath,
+                                clientLibCategories = page.clientLibCategories}"></sly>
+<sly data-sly-test.scheme="${request.scheme}" />
+<sly data-sly-test.servername="${request.serverName}" />
+<sly data-sly-test.serverport="${request.serverPort}" />
+<sly data-sly-test.val="${request.requestURI}" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="title" content="${properties.pageTitle || properties.jcr:title}">
+<meta data-sly-test="${properties.jcr:description}" name="description" content="${properties.description}" />
+<meta name="format-detection" content="telephone=no">
+
+<!-- og meta -->
+<sly data-sly-use.domainModel="com.takeda.core.models.DomainNameModel"/>
+<meta data-sly-test="${inheritedPageProperties['ogImage']} && ${domainModel.domainName}" property="og:image" content="${domainModel.domainName}${inheritedPageProperties['ogImage']}" />
+<meta property="og:site_name" content="${metaDataModel.brandName}"/>
+<meta data-sly-test.isOgTitle="${properties.ogtitle}" property="og:title" content="${properties.ogtitle}"/>
+<meta data-sly-test="${!isOgTitle && properties.pageTitle}" property="og:title" content="${properties.pageTitle}"/>
+<meta data-sly-test="${properties.jcr:description}" property="og:description" content="${properties.jcr:description}"/>
+<meta property="og:url" content="${metaDataModel.caOgURL}" />
+<meta property="og:image:width" content="300"/>
+<meta property="og:image:height" content="300"/>
+<meta data-sly-test="${properties.noindextag}" name="robots" content="noindex"/> 
+
+<!-- favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="/etc.clientlibs/dexilant/clientlibs/clientlib-site/resources/images/logo_dex_apple@2x.png" />
+<link rel="canonical" href="${metaDataModel.canonicalURL}" itemprop="url"/>
+<sly data-sly-resource="${'cookiename' @ resourceType='takeda-commons/components/takeda/content/cookiename'}"/>
+<sly data-sly-resource="${'digitalData' @ resourceType='takeda-commons/components/takeda/content/datalayer'}"/>
+<sly data-sly-use.dtm="com.takeda.core.models.DTMScriptModel" />
+<script src="${dtm.pageurl}"></script>

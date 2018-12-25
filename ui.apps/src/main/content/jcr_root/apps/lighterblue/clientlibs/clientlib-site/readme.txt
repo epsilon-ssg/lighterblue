@@ -1,0 +1,1 @@
+This client library should be used to embed dependencies of each component and all site level css and js files.

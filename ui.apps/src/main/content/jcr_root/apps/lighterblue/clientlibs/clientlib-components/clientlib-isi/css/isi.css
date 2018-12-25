@@ -1,0 +1,323 @@
+.isiwrapper .container{
+	max-width: 100%;
+}
+.isiwrapper.isiwrapper-fixed .title{
+    color: #fff;
+}
+.isiwrapper{
+    padding-top: 13px;
+    background-color: #fff;
+    transition: all 300ms ease-in-out;
+    margin-bottom:30px;
+}
+.isiwrapper p a{ 
+   font-weight: 400;
+}
+.isiwrapper .title h4{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #1f838f;
+	line-height: 19.8px;
+}
+.isiwrapper .title h2{
+    margin-top: 23px;
+}
+.isiwrapper .content h2 {
+    margin-top: 0px;
+    margin-bottom: 9px;
+}
+.isiwrapper .title .isi-less-text,
+.isiwrapper .title .isi-more-text{
+    display: none;
+}
+.isiwrapper.isiwrapper-fixed .isi-more-text{
+    display:block;
+ }
+.isiwrapper.isiwrapper-fixed .title h4{
+    color: #fff;
+}
+.isiwrapper .container{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.isiwrapper .content{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.isiwrapper ul{
+    padding-left: 15px;
+    line-height: 16px;
+    margin-bottom: 15px;
+}
+.isiwrapper.isiwrapper-fixed{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    z-index: 9;
+    height: 84px;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    background: #62a5c8; 
+    color: #fff;
+    margin-bottom: 0;
+    min-height: 84px;
+    max-height: 90px;
+}
+.isiwrapper.isiwrapper.isiwrapper-fixed.minized{
+    height: 35px;
+}
+.isiwrapper.isiwrapper.isiwrapper-fixed p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 18px;
+}
+.isiwrapper .see-more{
+    cursor: pointer;
+    display: inline-block;
+}
+.isiwrapper .subTitle{
+    margin-bottom: 15px;
+    width: 100%;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    color: #1f838f;
+    margin-top: 29px;
+    display: block;
+}
+.isiwrapper a{
+    color: #e8782c;
+    text-decoration: underline;
+}
+
+.isiwrapper .content .tel a{
+    color: #585a63;
+    text-decoration:none;
+}
+.isiwrapper .fixed-text-show{
+    display: none;
+}
+.isiwrapper.isiwrapper.isiwrapper-fixed .fixed-text-show{
+    display: inline-block;
+}
+.isiwrapper.isiwrapper-fixed h2{
+    color: #fff;
+    margin: 0 0 6px 0;
+    padding: 10px 0 0 0;
+    font-size: 26px;
+}
+.isiwrapper .content{
+    color: #fff;
+}
+.isiwrapper.isiwrapper-fixed .title h2{
+    margin-top: 0px;
+    padding-top: 8px;
+    margin-bottom: 6px;
+    font-size: 26px;
+    color: #fff;
+}
+html.overlay,
+body.overlay{
+	overflow:hidden;
+}
+.isiwrapper.isiwrapper-fixed.expand{
+    background: #fff;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 25px;
+    max-height: 100%;
+    z-index: 99;
+}
+
+.isiwrapper.isiwrapper-fixed.expand p{
+    margin-bottom: 20px;
+    color: #585a63;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+.isiwrapper.isiwrapper-fixed.expand .isi-more-text{
+	display:none;
+}
+.isiwrapper.isiwrapper-fixed.expand .isi-less-text{
+	font-size: 14px;
+	color: #62a5c8;
+    display:block;
+ }
+.isiwrapper.isiwrapper-fixed.expand h2{
+	margin-bottom: 16px;
+    padding: 0;
+    color: #585a63;
+    font-size: 29px;
+    margin-top:15px;
+}
+.isiwrapper.isiwrapper-fixed .see-more{
+    font-family: 'InterstateBoldCond';
+    padding: 0;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.isiwrapper .isiShortDescription{
+    display:none;
+    margin-bottom: 50px;
+}
+
+.isiwrapper.isiwrapper-fixed.expand .isiShortDescription{
+    display:none;
+}
+.isiwrapper.isiwrapper-fixed .isiShortDescription{
+    display:block;
+    font-family: 'PTSansRegular';
+    font-size: 15px;
+}
+.hcp .isiwrapper.isiwrapper-fixed .isiShortDescription li{
+    font-size: 13px;
+    line-height: 13px;
+    color:#fff;
+}
+
+@media (min-width: 768px) and (max-width: 990px){
+ 	.isiwrapper .container{
+        width:100%;
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .isiwrapper .content{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .isiwrapper .blackbox{
+        padding:15px 8px;
+    }
+    .isiwrapper .blackbox h4{
+        margin-bottom: 4px;
+    }
+    .isiwrapper .title h4 {
+        font-size: 20px;
+    }
+    .isiwrapper .blackbox h4{
+        margin-bottom: 12px;
+    }
+    .isiwrapper.isiwrapper-fixed .title .isi-more-text {
+        margin-top: 7px;
+    }
+    .isiwrapper .blackbox p:last-child{
+        margin-bottom: 5px;
+    }
+    .isiwrapper.isiwrapper-fixed .title h2{
+        font-size: 22px;
+    }
+    .isiwrapper.isiwrapper-fixed .title .isi-more-text,
+    .isiwrapper.isiwrapper-fixed.expand .isi-less-text{
+        font-size: 0;
+        margin-top: 0;
+    }
+    .isiwrapper.isiwrapper-fixed .isi-more-text:before,
+    .isiwrapper.isiwrapper-fixed.expand .isi-less-text:before{
+        content: '+';
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: block;
+        border: 2px solid #fff;
+        line-height: 17px;
+        text-align: center;
+        font-size: 14px;
+    }
+    .isiwrapper.isiwrapper-fixed.expand .isi-less-text:before{
+        content: '-';
+        border: 2px solid #62a5c8;
+    }
+    .isiwrapper .content .tel a{
+           color: #0078ae;
+        text-decoration:underline;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px){
+    .isiwrapper .container{
+        width:100%;
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .isiwrapper .content{
+        padding-top: 8px;
+    }
+    .isiwrapper .blackbox{
+        padding:8px;
+    }
+    .isiwrapper .blackbox h4{
+        margin-bottom: 4px;
+    }
+    .isiwrapper.isiwrapper-fixed .title .isi-more-text {
+        margin-top: 7px;
+    }
+    .isiwrapper .blackbox p:last-child{
+        margin-bottom: 5px;
+    }
+    .isiwrapper .content{
+        padding-top: 0;
+    }
+    .isiwrapper.isiwrapper-fixed .title h2,
+    .isiwrapper .title h2, 
+    .isiwrapper .content h2{
+        font-size: 24px;
+    }
+    .isiwrapper.isiwrapper-fixed .title h2{
+        font-size: 22px;
+    }
+    .isiwrapper.isiwrapper-fixed .title .isi-more-text,
+    .isiwrapper.isiwrapper-fixed.expand .isi-less-text{
+        font-size: 0;
+        margin-top: 0;
+    }
+    .isiwrapper.isiwrapper-fixed .isi-more-text:before,
+    .isiwrapper.isiwrapper-fixed.expand .isi-less-text:before{
+        content: '+';
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: block;
+        border: 2px solid #fff;
+        line-height: 17px;
+        text-align: center;
+        font-size: 14px;
+    }
+    .isiwrapper.isiwrapper-fixed.expand .isi-less-text:before{
+        content: '-';
+        border: 2px solid #62a5c8;
+    }
+    .isiwrapper .title .col-xs-8{
+       width: 100%;
+    }
+    .isiwrapper.isiwrapper-fixed .title .col-xs-8{
+         width: 83.33333333333334%;
+         padding-right: 0px;
+    }
+  .isiwrapper .content a {
+    color: #0078ae;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+    .isiwrapper .content .tel a{
+           color: #0078ae;
+        text-decoration:underline;
+    }
+  .isiwrapper.isiwrapper-fixed {
+    transition: all 300ms ease-in-out;
+    background: #62a5c8;
+    min-height: 128px;
+    max-height: 140px;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,621 @@
+/*************************************************/
+
+
+/**** **** Reset Value **** ***/
+
+
+/***********************************************/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-weight: normal;
+    font-style: inherit;
+    font-family: inherit;
+    background: transparent;
+}
+input:focus{
+    outline: none;
+}
+body {
+    font-family:Tahoma,Arial,san-serif; 
+    font-size:12px; 
+    line-height:1; 
+    color:black; 
+    text-size-adjust:none; 
+    -moz-text-size-adjust:none; 
+    -webkit-text-size-adjust:none; 
+    background:none;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+h1, h2 {
+    font-family: 'InterstateBoldCond';
+    margin-bottom: 16px;
+    font-size: 29px;
+    color: #585a63;
+    line-height: inherit;
+}
+h3 {
+    font-family: 'InterstateBoldCond';
+    margin-bottom: 12px;
+    font-size: 23px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #0078ae;
+}
+ul li, ol li{
+    line-height: 1.4em;
+}
+p {
+    font-family: 'PTSansRegular';
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #585a63;
+    line-height: 1.4em;
+}
+h4 {
+    font-family: 'PTSansBold';
+    margin-bottom: 8px;
+    font-size: 17px;
+    color: #0078ae;
+    line-height: 1.2em;
+}
+fieldset input[type="radio"] + label:after, 
+fieldset input[type="checkbox"] + label:after,
+.unsubscribe .checkbox .checkmark:after,
+fieldset input[type="radio"] + input[type="hidden"] + label:after, 
+fieldset input[type="checkbox"] + input[type="hidden"] + label:after, 
+fieldset input[type="checkbox"].error + input[type="hidden"] + label:after, 
+[button-type="white"][left]:after, [button-type="white"][right]:after{
+    background-image: url(../../clientlib-site/resources/images/global_dexilant.png);
+    background-size: 300px 300px;
+}
+fieldset input[type].error, 
+fieldset input[type].error:focus {
+    border: 2px solid #d90303;
+}
+
+.error{
+    font-size: 14px;
+    color: #d90303;
+    display: block;
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="date"], input[type="submit"], input[type="number"], textarea, button, select {
+    margin: 0;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    resize: none;
+}
+/* ---- ---- RADIO ---- --- */
+
+fieldset input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -10000;
+}
+
+fieldset input[type="radio"]+label,
+fieldset input[type="radio"]+input[type="hidden"]+label {
+    font-family: 'PTSansRegular';
+    position: relative;
+    margin: 0 0 20px 0;
+    padding: 0 8px 0 30px;
+    min-height: 24px;
+    color: #0078ae;
+    display: inline-block;
+    font-size: 18px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+fieldset input[type="radio"]+label:after,
+fieldset input[type="radio"]+input[type="hidden"]+label:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-position: -27px -243px;
+}
+
+fieldset input[type="radio"]:checked+label,
+fieldset input[type="radio"]:checked+input[type="hidden"]+label {
+    color: #ff8802;
+}
+
+fieldset input[type="radio"]:checked+label:after,
+fieldset input[type="radio"]:checked+input[type="hidden"]+label:after {
+    background-position: -27px -270px;
+}
+
+
+/* input radio yes/no */
+
+fieldset input[type="radio"]+label[yes],
+fieldset input[type="radio"]+label[no] {
+    margin: 4px 0 0 0;
+    padding: 0 16px;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    line-height: 34px;
+    text-align: center;
+    border: 4px solid #0078ae;
+    background: #fff;
+}
+
+fieldset input[type="radio"].error + label{
+    border-color: #d90303;
+}
+
+fieldset input[type="radio"]:checked+label[yes],
+fieldset input[type="radio"]:checked+label[no] {
+    border-color: #ff8802;
+}
+
+fieldset input[type="radio"]+label[yes]:after,
+fieldset input[type="radio"]+label[no]:after {
+    display: none;
+}
+
+
+/* ---- ---- CHECKBOX ---- --- */
+
+fieldset input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -10000;
+}
+
+fieldset input[type="checkbox"]+label,
+fieldset input[type="checkbox"]+input[type="hidden"]+label {
+    font-family: 'PTSansRegular';
+    position: relative;
+    margin: 0 0 20px 0;
+    padding: 4px 8px 0 38px;
+    min-height: 24px;
+    color: #0078ae;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 22px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+fieldset input[type="checkbox"]+label:after,
+.unsubscribe .checkbox .checkmark::after,
+fieldset input[type="checkbox"]+input[type="hidden"]+label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    width: 24px;
+    height: 24px;
+    background-position: -63px -243px;
+}
+
+fieldset input[type="checkbox"]:checked+label,
+fieldset input[type="checkbox"]:checked+input[type="hidden"]+label {
+    color: #ff8802;
+}
+
+fieldset input[type="checkbox"]:checked+label:after,
+fieldset input[type="checkbox"]:checked+input[type="hidden"]+label:after {
+    background-position: -63px -270px;
+}
+
+fieldset input[type="checkbox"]:checked+input[type="hidden"]+label:focus {
+    border: none;
+}
+
+fieldset input[type="checkbox"].error+input[type="hidden"]+label:after {
+    background-position: -63px -216px;
+}
+
+
+/* ---- ---- INPUT FIELD ---- --- */
+
+fieldset input[type],
+.form-group input[type],
+fieldset textarea {
+    font-family: 'PTSansRegular';
+    margin-bottom: 14px;
+    padding: 0 0 0 8px;
+    color: #0078ae;
+    font-size: 16px;
+    width: 100%;
+    min-height: 38px;
+    border: 2px solid #0078ae;
+}
+
+fieldset input[type="radio"],
+fieldset input[type="checkbox"] {
+    width: 1px;
+    height: 1px;
+}
+
+
+/* disabled state */
+
+fieldset input[type][disabled],
+fieldset textarea[disabled] {
+    border: 2px solid #999;
+    background: #e3e3e3;
+}
+
+
+/* focus state */
+
+fieldset input[type]:focus,
+fieldset textarea:focus {
+    border-color: #ff8802;
+}
+
+fieldset input:focus+label:after,
+fieldset input:focus+input[type="hidden"]+label:after {}
+
+fieldset input[type="checkbox"]:focus,
+fieldset input[type="checkbox"]:focus+label:after,
+fieldset input[type="checkbox"]:checked:focus+input[type="hidden"]+label:after {
+    outline: none;
+}
+
+
+/* error state : regular and focused states */
+
+fieldset input[type].error,
+fieldset input[type].error:focus {
+    border: 2px solid #d90303;
+}
+
+fieldset input[type="checkbox"].input-validation-error + input[type="hidden"] + label:after,
+fieldset input[type="checkbox"].error + label:after{
+    background-position: -63px -216px;
+}
+
+/* ---- ---- LABEL ---- --- */
+
+fieldset label.text,
+.form-group label {
+    font-family: 'PTSansBold';
+    padding: 4px 8px 4px 0;
+    font-size: 16px;
+    color: #585a63;
+}
+
+
+/* ---- ---- SELECT ---- --- */
+
+select,
+select.error {
+    font-family: 'PTSansRegular';
+    position: relative;
+    padding: 0 40px 0 8px;
+    width: auto;
+    color: #0078ae;
+    font-size: 16px;
+    height: 38px;
+    border: 2px solid #0078ae;
+    background: url(../../clientlib-site/resources/images/select_arrow.png) right 50% no-repeat #fff;
+    background-size: 20px 7px;
+}
+select.error,
+select.error:focus{
+    border-color: #d90303;
+    outline: none;
+}
+select:focus {
+    border-color: #1C5578;
+}
+
+
+select::-ms-expand {
+    display: none;
+}
+
+
+/* ---- ---- mobile ---- --- */
+
+@media all and (max-width:768px) {
+    fieldset input[type="radio"]+label:after,
+    fieldset input[type="radio"]+input[type="hidden"]+label:after {
+        top: 4px;
+    }
+    fieldset input[type="radio"]+label,
+    fieldset input[type="radio"]+input[type="hidden"]+label {
+        padding: 4px 8px 4px 34px;
+        width: 100%;
+    }
+    fieldset input[type="radio"]+label:after,
+    fieldset input[type="radio"]+input[type="hidden"]+label:after {
+        left: 4px;
+    }
+}
+
+.buttonComponent a,
+.btn,
+.buttonComponent button{
+    font-family: 'PTSansBold';
+    padding: 0 38px;
+    position: relative;
+    width: auto;
+    height: 36px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 30px;
+    line-height: 40px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background: #fd8825;
+}
+.btn:hover{
+    background: #f47c01;
+    color: #fff;
+}
+.talking-to-doctor .buttonComponent a,
+.talking-to-doctor .buttonComponent button{
+    background: #fd8825;
+    padding-left: 50px;
+    padding-right: 25px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.talking-to-doctor .buttonComponent a:hover{
+    color: #fff;
+}
+.talking-to-doctor .buttonComponent .icon:after,
+.talking-to-doctor .buttonComponent button .icon:after,
+.send_icon:after{
+    background: url('../../clientlib-site/resources/images/icon_download.svg') no-repeat top left;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    left: 20px;
+    line-height: 0;
+    vertical-align: middle;
+    content: ' ';
+    background-size: cover;
+}
+.send_icon:after{
+    background: url('../../clientlib-site/resources/images/icon_send.svg') no-repeat top left;
+    background-size: cover;
+}
+.field-validation-error {
+    padding-bottom:2px; 
+    font-size:14px; 
+    color:#d90303; 
+    display:block;
+}
+/********************************/
+
+
+/**** **** MODAL STARTS **** ***/
+
+
+/******************************/
+
+
+/* ---- ---- MODAL STYLING ---- --- */
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    max-width: 900px;
+    min-width: 700px;
+    max-height: 90%;
+    z-index: 11;
+    /* -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0; */
+    background: #fff;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    padding: 56px 48px 48px 48px;
+}
+/* .modal.show .modal-content{
+    -webkit-animation: Scale 300ms ease-in-out;
+    -moz-animation: Scale 300ms ease-in-out;
+    animation: Scale 300ms ease-in-out;
+} */
+.modal label.modal-close{
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    padding-right: 48px;
+    width: auto;
+    height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: #0078ae;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+}
+.modal label.modal-close:after{
+    content: 'Close';
+    font-family: 'InterstateBoldCond';
+    height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.modal label.modal-close i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    display: block;
+    border: 2px solid #0078ae;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.modal label.modal-close i:before,
+.modal label.modal-close i:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 2px;
+    display: block;
+    overflow: hidden;
+    background: #0078ae;
+}
+.modal label.modal-close i:before{
+    -webkit-transform: translate(-50%,-50%) rotate(45deg);
+    -moz-transform: translate(-50%,-50%) rotate(45deg);
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.modal label.modal-close i:after{
+    -webkit-transform: translate(-50%,-50%) rotate(-45deg);
+    -moz-transform: translate(-50%,-50%) rotate(-45deg);
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+.modal-footer{
+    border-top: 0;
+    text-align: left;
+}
+.modal-footer .btn{
+    font-family: 'PTSansBold';
+    position: relative;
+    padding: 8px 16px;
+    font-size: 16px;
+    display: block;
+    overflow: hidden;
+    border: 2px solid #0078ae;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    background: #f8f8f8;
+    padding: 20px 30px;
+    width: 200px;
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+    color: #0078ae;
+    border-radius: 0;
+    line-height: 1;
+    height: auto;
+}
+.modal-footer .btn:hover{
+    color: #ff8802;
+    border: 2px solid #ff8802;
+}
+/****************************************/
+/**** **** KEY ANIMATION STARTS **** ***/
+/**************************************/
+
+	/* ---- ---- SCALE ---- --- */
+    @-webkit-keyframes Scale {
+        0% {opacity:0; -webkit-transform:scale(0.75, 0.75) translate(-50%, -50%);}
+        100% { opacity:1; -webkit-transform:scale(1, 1) translate(-50%, -50%);}
+    }
+
+    @-moz-keyframes Scale {
+        0% {opacity:0; -moz-transform:scale(0.75, 0.75) translate(-50%, -50%);}
+        100% {opacity:1; -moz-transform:scale(1, 1) translate(-50%, -50%);}
+    }
+
+    @keyframes Scale {
+        0% {opacity:0; transform:scale(0.75, 0.75) translate(-50%, -50%);}
+        100% {opacity: 1; transform:scale(1, 1) translate(-50%, -50%);}
+    }
+
+/* ---- ---- DROPDOWN ---- --- */
+    @-webkit-keyframes Dropdown {
+        0% {opacity:0; -webkit-transform: translate3d(0,-8%,0);}
+        100% { opacity:1; -webkit-transform: translate3d(0,0,0);}
+    }
+
+    @-moz-keyframes Dropdown {
+        0% {opacity:0; -moz-transform: translate3d(0,-8%,0);}
+        100% {opacity:1; -moz-transform: translate3d(0,0,0);}
+    }
+
+    @keyframes Dropdown {
+        0% {opacity:0; transform:translate3d(0,-8%,0);}
+        100% {opacity: 1; transform:translate3d(0,0,0);}
+    }
+
+/* ---- ---- OPACITY FADE OUT ---- --- */
+    @-webkit-keyframes OpacityFadeOut {
+        0% {opacity:1;}
+        100% { opacity:0;}
+    }
+
+    @-moz-keyframes OpacityFadeOut {
+        0% {opacity:1;}
+        100% {opacity:0;}
+    }
+
+    @keyframes OpacityFadeOut {
+        0% {opacity:1;}
+        100% {opacity:0;}
+    }
+
+/* ---- ---- OPACITY FADE IN ---- --- */
+    @-webkit-keyframes OpacityFadeIn {
+        0% {opacity:0;}
+        100% { opacity:1;}
+    }
+
+    @-moz-keyframes OpacityFadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @keyframes OpacityFadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+/* ---- ---- SHINE ---- --- */
+    @-webkit-keyframes Shine {
+        0% {left:-100%;}
+        100% {left:100%;}
+    }
+
+    @-moz-keyframes Shine {
+        0% {left:-100%;}
+        100% {left:100%;}
+    }
+
+    @keyframes Shine {
+        0% {left:-100%;}
+        100% {left:100%;}
+    }

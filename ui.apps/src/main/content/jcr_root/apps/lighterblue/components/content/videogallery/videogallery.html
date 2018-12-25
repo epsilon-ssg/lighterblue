@@ -1,0 +1,39 @@
+<sly data-sly-test="${wcmmode.edit || wcmmode.design}">Configure Video gallery Component</sly>
+<sly data-sly-use.model="com.takeda.dexilant.models.VideoGalleryModel">
+<sly data-sly-test="${model.videos}">
+	<section class="main-video-stories">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-xs-12">
+					<div class="video_player_part">
+						<div controls id="videoPlayer"></div>
+						<div class="video-time"></div>
+					</div>
+				</div>
+				<div class="col-md-2 col-xs-12 video-thumbv">
+					<sly data-sly-test="${model.videos}" data-sly-list.videos="${model.videos}">
+						<sly data-sly-use.imgRend="${'com.takeda.core.models.EnhanceImageModel' @ desktopImage = videos.posterimage, optimizationCheck = properties.isOptimized, transformationImage = videos.posterTransform}"/>
+						<a data-video="${model.JwplayerVideoUrl}${videos.videoId}" data-image="${imgRend.renderedDesktopImage}" href="#" data-resolutions="${videos.videolabels}"
+						id="video${videosList.count}" data-videoTime="${videos.videoTime}" class="video-side-image ${videos.defaultVideo}" >
+							<sly data-sly-use.imageRend="${'com.takeda.core.models.EnhanceImageModel' @ desktopImage = videos.bgtileimage, optimizationCheck = properties.isOptimized, transformationImage = videos.bgtileTransform}"/>
+							<img src="${imageRend.renderedDesktopImage}" alt="${videos.bgaltText}" class="backgroundImg"/>
+							<sly data-sly-use.imgeRend="${'com.takeda.core.models.EnhanceImageModel' @ desktopImage = videos.tileimage, optimizationCheck = properties.isOptimized, transformationImage = videos.tileTransform}"/>
+							<img src="${imgeRend.renderedDesktopImage}" alt="${videos.altText}" class="foregroundImg"/>
+						</a>
+					</sly>
+				</div>
+			</div>
+			<div class="row">
+				<sly data-sly-test="${model.videos}" data-sly-list.videos="${model.videos}">
+					<div data-sly-test="${videosList.index == 0}" class="heading-carl">
+						${videos.transcriptText @context='html'}
+					</div>
+					<div data-sly-test="${videosList.index != 0}" class="heading-messila">
+						${videos.transcriptText @context='html'}
+					</div>
+				</sly>
+			</div>
+		</div>
+	</section>
+</sly>
+</sly>

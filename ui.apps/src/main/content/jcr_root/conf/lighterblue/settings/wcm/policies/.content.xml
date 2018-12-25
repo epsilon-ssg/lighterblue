@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <rep:policy/>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <dexilant_policy
+                        jcr:lastModified="{Date}2018-06-21T16:38:48.420+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="dexilant-policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:General,group:Dexilant,group:Takeda Commons]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </dexilant_policy>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
+     <policy_1542682922016
+        jcr:lastModified="{Date}2018-11-20T08:32:27.276+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="header-ipar-policy"
+        sling:resourceType="wcm/core/components/policy/policy"
+        components="[/apps/cq/experience-fragments/editor/components/experiencefragment,group:Takeda Commons,group:Dexilant]">
+        <jcr:content jcr:primaryType="nt:unstructured"/>
+        <section jcr:primaryType="nt:unstructured"/>
+    </policy_1542682922016>
+    <policy_1542683030759
+        jcr:lastModified="{Date}2018-10-31T14:58:54.904+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="footer-ipar-policy"
+        sling:resourceType="wcm/core/components/policy/policy"
+        components="[/apps/cq/experience-fragments/editor/components/experiencefragment,group:Takeda Commons,group:Dexilant]">
+        <jcr:content jcr:primaryType="nt:unstructured"/>
+        <section jcr:primaryType="nt:unstructured"/>
+    </policy_1542683030759>
+</jcr:root>
